@@ -10,7 +10,7 @@ class AuthController {
     // 1.非对称加密
     // 把id和name写到token里了，就是payload的里面
     const token = jwt.sign({ id, name }, PRIVATE_KEY, {
-      expiresIn: 5, // 有效时间(秒)
+      expiresIn: 60 * 60 * 24, // 有效时间(秒)
       algorithm: "RS256" // 加密算法, 默认是HS256
     })
 

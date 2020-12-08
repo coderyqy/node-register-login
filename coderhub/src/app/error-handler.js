@@ -23,6 +23,10 @@ const errorHandler = (error, ctx) => {
       status = 401 // 没权限
       message = "未授权"
       break
+    case errorTypes.UNPERMISSION:
+      status = 401 // 没权限
+      message = "您不具备操作的权限"
+      break
     default:
       status = 404
       message = "Not Found"
